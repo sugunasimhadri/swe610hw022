@@ -1,0 +1,21 @@
+<h1>Dogs in the Database</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+<% @dogs.each do |u| %> 
+  <tr>
+    <td><%= link_to u.name, dog_path(u) %></td>
+    <td><%= u.age %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<%= link_to "new", dogs_new_path %> <!-- Create a link that appears as "new" that leads to users_new_path -->
+Contact GitHub API Training Shop Blog About
